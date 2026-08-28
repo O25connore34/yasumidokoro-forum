@@ -1,0 +1,327 @@
+const I18N = {
+  ja: {
+    skip: "本文へ跳ぶ",
+    name: "休み処",
+    kana: "やすみどころ",
+    tagline: "山野の休み場所を、行った人の話で選ぶ",
+    heroKicker: "掲示板",
+    heroLead:
+      "地図のピンではなく、泊まった人の順番で場所を選ぶ。空きは現地と管理者に聞く。",
+    latest: "新着",
+    categories: "分類",
+    top: "よく読まれている",
+    members: "メンバー",
+    me: "自分",
+    notify: "知らせ",
+    newTopic: "話題を立てる",
+    replies: "返信",
+    views: "閲覧",
+    activity: "動き",
+    like: "役立つ",
+    liked: "役立った",
+    lastPost: "最終",
+    topic: "話題",
+    search: "探す",
+    searchPh: "地名、林道、山小屋、水場…",
+    about: "休み処について",
+    guidelines: "使い方",
+    composeTitle: "見出し",
+    composeBody: "本文",
+    composeCat: "分類",
+    composeTags: "合印（読点またはカンマ）",
+    composeName: "名",
+    post: "投稿する",
+    cancel: "やめる",
+    pinned: "固定",
+    closed: "締め",
+    unread: "未読",
+    filter: "絞り込み",
+    all: "すべて",
+    loginHint: "名はこの端末にだけ残る。別のログインはない。",
+    footer:
+      "休み処は予約サイトではない。空き・通行止めは現地と管理者へ。火とゴミは自分で始末する。",
+    empty: "この分類にはまだ話題がない。",
+    noResults: "その言葉では見つからなかった。",
+    writeReply: "返信を書く",
+    replyPh: "行った日、標高、水場の有無、通行止めを書く。",
+    joined: "入会",
+    seen: "最終",
+    loc: "拠点",
+    role: "歩き方",
+    posts: "投稿",
+    topics: "話題",
+    noticesEmpty: "新しい知らせはない。",
+    sortActivity: "動き順",
+    sortLatest: "新しい順",
+    sortTop: "閲覧順",
+    back: "一覧へ戻る",
+    guest: "通りがかり",
+    you: "自分の投稿",
+    statsMembers: "人",
+    statsTopics: "話題",
+    statsPosts: "投稿",
+    lastSeen: "最終の動き",
+    langJa: "日本語",
+    langRu: "ロシア語",
+    langEn: "英語",
+    dockLatest: "新着",
+    dockCats: "分類",
+    dockWrite: "書く",
+    dockNotices: "知らせ",
+    dockMe: "自分",
+    aboutTitle: "休み処について",
+    aboutBody: [
+      "休み処は、日本の山・林道・渓流・里山で「今夜どこに体を置くか」を選ぶための掲示板です。予約の窓口ではありません。",
+      "本文は日本語を基本にします。ロシア語と英語の投稿もそのまま残します。機械翻訳で意味を潰さないこと。",
+      "書く順番は、日付、標高、水場、トイレ、熊・通行止め、火の始末。感想より先に、次に行く人の判断材料を置く。",
+      "写真は場所が分かるもの。顔とナンバーは出さない。営利の誘導、空き家への無断泊は削除します。"
+    ],
+    guideTitle: "使い方",
+    guideItems: [
+      "見出しは地名を先に。例：上高地・徳沢、土曜のテント場。",
+      "分類は一つ。野営場・山小屋・林道・渓畔・湯治・里山・季節と危険・作法。",
+      "火は許可地だけ。吸い殻と油は持ち帰る。",
+      "熊鈴と食糧の扱いを書く。書いていない場合は「不明」と読む。",
+      "山小屋の空きは電話確認を前提にする。掲示板の数字は前日の話。"
+    ],
+    meBlurb:
+      "この端末の名と、役立つと印を付けた話題。サーバには送りません。",
+    notices: [
+      {
+        t: "8月26日",
+        text: "大雪山・層雲峡側、6月残雪の話題に新しい通行止めが付いた。"
+      },
+      {
+        t: "8月24日",
+        text: "奥多摩・氷川側の林道、夜間のトイレ閉鎖を追記。"
+      }
+    ],
+    timeNow: "いま",
+    timeMin: (n) => n + "分前",
+    timeHour: (n) => n + "時間前",
+    timeDay: (n) => n + "日前",
+    timeWeek: (n) => n + "週前"
+  },
+  ru: {
+    skip: "К записям",
+    name: "休み処",
+    kana: "Ясумидокоро",
+    tagline: "Где лечь в японских горах — по словам тех, кто уже ночевал",
+    heroKicker: "Доска",
+    heroLead:
+      "Не булавка на карте, а очередь людей, которые уже ставили палатку. Свободные места спрашивают на месте.",
+    latest: "Свежие",
+    categories: "Разделы",
+    top: "Что читают",
+    members: "Участники",
+    me: "Я",
+    notify: "Оповещения",
+    newTopic: "Новая запись",
+    replies: "Ответы",
+    views: "Смотрели",
+    activity: "Живость",
+    like: "Пригодится",
+    liked: "Отмечено",
+    lastPost: "Последнее",
+    topic: "Запись",
+    search: "Искать",
+    searchPh: "перевал, изба, лесная дорога, вода…",
+    about: "О доске",
+    guidelines: "Как здесь пишут",
+    composeTitle: "Заголовок",
+    composeBody: "Текст",
+    composeCat: "Раздел",
+    composeTags: "Метки через запятую",
+    composeName: "Имя",
+    post: "Выложить",
+    cancel: "Не надо",
+    pinned: "Наверху",
+    closed: "Закрыто",
+    unread: "Непрочитанное",
+    filter: "Отбор",
+    all: "Все",
+    loginHint: "Имя останется на этом устройстве. Отдельной учётки нет.",
+    footer:
+      "Это не бюро бронирования. Перекрытия и свободные места — у хозяина и на месте. Огонь и мусор — свои.",
+    empty: "В этом разделе пока тихо.",
+    noResults: "По такому запросу ничего нет.",
+    writeReply: "Ответить",
+    replyPh: "Дата захода, высота, есть ли вода, закрыта ли дорога.",
+    joined: "С нами",
+    seen: "Заходил",
+    loc: "Откуда ходит",
+    role: "Как ходит",
+    posts: "Записи",
+    topics: "Ветки",
+    noticesEmpty: "Новых оповещений нет.",
+    sortActivity: "По живости",
+    sortLatest: "Сначала новые",
+    sortTop: "По просмотрам",
+    back: "К списку",
+    guest: "Прохожий",
+    you: "Ваши записи",
+    statsMembers: "человек",
+    statsTopics: "веток",
+    statsPosts: "записей",
+    lastSeen: "Последнее движение",
+    langJa: "Японский",
+    langRu: "Русский",
+    langEn: "Английский",
+    dockLatest: "Свежие",
+    dockCats: "Разделы",
+    dockWrite: "Писать",
+    dockNotices: "Сигнал",
+    dockMe: "Я",
+    aboutTitle: "О доске",
+    aboutBody: [
+      "休み処 — доска, где выбирают, куда поставить тело на ночь в горах, на лесной дороге, у ручья или в сатояме. Это не окно бронирования.",
+      "Основной язык — японский. Русские и английские тексты оставляем как есть: машинный перевод смысл не выглаживает.",
+      "Сначала дата, высота, вода, туалет, медведь и перекрытия, огонь. Впечатления — после фактов, по которым пойдёт следующий.",
+      "Снимок должен узнавать место. Лица и номера машин не нужны. Рекламу ночёвок в чужих домах снимаем."
+    ],
+    guideTitle: "Как здесь пишут",
+    guideItems: [
+      "В заголовке сначала место. Например: Камикоти, Токусава — палатки в субботу.",
+      "Один раздел: лагерь, изба, лесная дорога, берег, онсэн после хода, сатояма, сезон и опасность, обычай.",
+      "Огонь — только где разрешено. Окурки и масло уносите.",
+      "Пишите про колокольчик и еду. Если не написано — читать как «неизвестно».",
+      "Свободные места в избе уточняют по телефону. Цифра на доске — вчерашняя."
+    ],
+    meBlurb: "Имя на этом устройстве и ветки, которые вы отметили. На сервер не уходит.",
+    notices: [
+      {
+        t: "26 августа",
+        text: "Дайсэцудзан, сторона Соункё: к июньскому снегу добавили новое перекрытие."
+      },
+      {
+        t: "24 августа",
+        text: "Окутама, сторона Хикавы: ночной туалет на лесной дороге закрыт — дописали."
+      }
+    ],
+    timeNow: "сейчас",
+    timeMin: (n) => n + " мин назад",
+    timeHour: (n) => {
+      const n10 = n % 10;
+      const n100 = n % 100;
+      if (n10 === 1 && n100 !== 11) return n + " час назад";
+      if (n10 >= 2 && n10 <= 4 && (n100 < 12 || n100 > 14)) return n + " часа назад";
+      return n + " часов назад";
+    },
+    timeDay: (n) => {
+      const n10 = n % 10;
+      const n100 = n % 100;
+      if (n10 === 1 && n100 !== 11) return n + " день назад";
+      if (n10 >= 2 && n10 <= 4 && (n100 < 12 || n100 > 14)) return n + " дня назад";
+      return n + " дней назад";
+    },
+    timeWeek: (n) => {
+      const n10 = n % 10;
+      const n100 = n % 100;
+      if (n10 === 1 && n100 !== 11) return n + " неделю назад";
+      if (n10 >= 2 && n10 <= 4 && (n100 < 12 || n100 > 14)) return n + " недели назад";
+      return n + " недель назад";
+    }
+  },
+  en: {
+    skip: "Skip to threads",
+    name: "休み処",
+    kana: "Yasumidokoro",
+    tagline: "Choose a rest spot in Japan’s hills from people who slept there",
+    heroKicker: "Field board",
+    heroLead:
+      "Not a map pin — the order of people who already put a tent down. Vacancies are asked on site.",
+    latest: "Latest",
+    categories: "Boards",
+    top: "Most read",
+    members: "Members",
+    me: "You",
+    notify: "Notices",
+    newTopic: "Start a thread",
+    replies: "Replies",
+    views: "Seen",
+    activity: "Active",
+    like: "Useful",
+    liked: "Marked",
+    lastPost: "Last",
+    topic: "Thread",
+    search: "Search",
+    searchPh: "pass, hut, forest road, water…",
+    about: "About this board",
+    guidelines: "How we write",
+    composeTitle: "Headline",
+    composeBody: "Body",
+    composeCat: "Board",
+    composeTags: "Marks, comma-separated",
+    composeName: "Name",
+    post: "Post",
+    cancel: "Leave it",
+    pinned: "Pinned",
+    closed: "Closed",
+    unread: "Unread",
+    filter: "Narrow",
+    all: "All",
+    loginHint: "The name stays on this device. There is no separate account.",
+    footer:
+      "This is not a booking desk. Closures and empty pads are checked on site. Fire and rubbish stay yours.",
+    empty: "This board is still quiet.",
+    noResults: "Nothing under that wording.",
+    writeReply: "Write a reply",
+    replyPh: "Date of visit, elevation, water, whether the road is shut.",
+    joined: "Joined",
+    seen: "Last here",
+    loc: "Walks from",
+    role: "How they walk",
+    posts: "Posts",
+    topics: "Threads",
+    noticesEmpty: "No new notices.",
+    sortActivity: "By activity",
+    sortLatest: "Newest first",
+    sortTop: "By reads",
+    back: "Back to the list",
+    guest: "Passer-by",
+    you: "Your posts",
+    statsMembers: "people",
+    statsTopics: "threads",
+    statsPosts: "posts",
+    lastSeen: "Last movement",
+    langJa: "Japanese",
+    langRu: "Russian",
+    langEn: "English",
+    dockLatest: "Latest",
+    dockCats: "Boards",
+    dockWrite: "Write",
+    dockNotices: "Notices",
+    dockMe: "You",
+    aboutTitle: "About this board",
+    aboutBody: [
+      "Yasumidokoro is a board for choosing where to put your body overnight in Japan’s mountains, forest roads, streams, and satoyama. It is not a booking window.",
+      "Japanese is the working language. Russian and English posts stay as written. Machine translation is not allowed to flatten meaning.",
+      "Write date, elevation, water, toilets, bears and closures, then fire. Put the next walker’s facts ahead of your feelings.",
+      "A photo should identify the place. No faces, no number plates. We remove ads and uninvited stays in other people’s houses."
+    ],
+    guideTitle: "How we write",
+    guideItems: [
+      "Place-name first in the headline. Example: Kamikochi, Tokusawa — Saturday tent pads.",
+      "One board only: campground, hut, forest road, stream bank, hot-spring rest, satoyama, season and hazard, custom.",
+      "Fire only where it is allowed. Butts and oil go home with you.",
+      "Say whether you carried a bear bell and how you stored food. Silence reads as unknown.",
+      "Hut vacancies are confirmed by phone. A number on this board is yesterday’s."
+    ],
+    meBlurb: "The name on this device, and threads you marked useful. Nothing is sent to a server.",
+    notices: [
+      {
+        t: "26 Aug",
+        text: "Daisetsuzan, Sōunkyō side: a new closure was added to the June leftover-snow thread."
+      },
+      {
+        t: "24 Aug",
+        text: "Okutama, Hikawa side: the night toilet on the forest road is shut — noted."
+      }
+    ],
+    timeNow: "just now",
+    timeMin: (n) => n + " min ago",
+    timeHour: (n) => n + "h ago",
+    timeDay: (n) => n + "d ago",
+    timeWeek: (n) => n + "w ago"
+  }
+};

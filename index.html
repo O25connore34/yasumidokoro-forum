@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>休み処</title>
+    <meta
+      name="description"
+      content="山野の休み場所を、行った人の話で選ぶ掲示板。日本語を基本に、ロシア語と英語の投稿も残す。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600&family=Source+Sans+3:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/app.css?v=cover-full" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%23efe6d0' width='32' height='32'/%3E%3Cpath fill='%231a1612' d='M4 22 L16 8 L28 22h-5l-7-8-7 8z'/%3E%3Crect fill='%23b1321f' x='14.2' y='18' width='3.6' height='6'/%3E%3C/svg%3E" />
+    <style>
+      .visually {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip" href="#main" data-i="skip">本文へ跳ぶ</a>
+    <header class="top">
+      <a class="brand" href="#/">
+        <svg class="mark" viewBox="0 0 32 32" aria-hidden="true">
+          <path fill="#1a1612" d="M3 23 L16 7 L29 23h-5.2L16 12.4 8.2 23z" />
+          <rect fill="#b1321f" x="14.3" y="18.2" width="3.4" height="6.3" />
+        </svg>
+        <span class="brand-name" data-i="name">休み処</span>
+        <span class="brand-kana" data-i="kana">やすみどころ</span>
+      </a>
+      <form class="search" id="search-form">
+        <label class="visually" for="q" data-i="search">探す</label>
+        <input id="q" name="q" type="search" autocomplete="off" data-i-ph="searchPh" />
+      </form>
+      <div class="top-actions">
+        <div class="lang" role="group" aria-label="language">
+          <button type="button" data-lang="ja" aria-pressed="true">JA</button>
+          <button type="button" data-lang="ru" aria-pressed="false">RU</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button class="btn" type="button" data-go="compose" data-i="newTopic">話題を立てる</button>
+      </div>
+    </header>
+
+    <div class="layout">
+      <aside class="rail" id="rail"></aside>
+      <main class="main" id="main"></main>
+      <aside class="stat" id="stat"></aside>
+      <footer class="foot" data-i="footer"></footer>
+    </div>
+
+    <nav class="dock" id="dock"></nav>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
